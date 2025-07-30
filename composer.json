@@ -1,0 +1,15 @@
+{
+    "name": "gizmo/github-user-activity-cli",
+    "type": "project",
+    "require": {
+        "php": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gizmo\\GithubUserActivityCli\\": "src/"
+        }
+    },
+    "bin": [
+        "src/cli.php"
+    ]
+}
