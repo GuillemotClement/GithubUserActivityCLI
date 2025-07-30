@@ -1,5 +1,7 @@
 #! /user/bin/env php 
 <?php
+
+use GithubActivity;
 // la première ligne est un shebang qui permet d'executer le fichier en tant que script PHP
 // php src/cli.php <commande> <arg> <arg2> => permet de lancer le script
 require __DIR__ . '/../vendor/autoload.php';
@@ -16,3 +18,11 @@ echo "Argument 1 :" . $arg1 . PHP_EOL;
 echo "Argument 2 :" . $arg2 . PHP_EOL;  
 
 // on viens ensuite choper la commande et appeller la méthode correspondantes.
+switch($command){
+  case "github-activity":
+    break;
+  case "help":
+      $cli = new GithubActivity;
+      $cli->displayHelp();
+      break;
+}
